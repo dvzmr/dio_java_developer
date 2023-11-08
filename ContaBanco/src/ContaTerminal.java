@@ -1,26 +1,27 @@
-import Classes.ContaTerminal;
-
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class ContaTerminal {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        ContaTerminal conta = new ContaTerminal();
+
+        int numero;
+        String agencia, nomeDoCliente;
+        double saldo;
 
         System.out.println("Por favor, digite o numero da conta:");
-        conta.numero = sc.nextInt();
+        numero = sc.nextInt();
         sc.nextLine();
         System.out.println("Por favor, digite o numero da agencia:");
-        conta.agencia = sc.nextLine();
+        agencia = sc.nextLine();
         System.out.println("Por favor, digite o saldo da conta:");
-        conta.saldo = sc.nextDouble();
+        saldo = sc.nextDouble();
         sc.nextLine();
         System.out.println("Por favor, digite o nome do cliente:");
-        conta.nomeDoCliente = sc.nextLine();
+        nomeDoCliente = sc.nextLine();
 
 
-        System.out.println("Olá "+ conta.nomeDoCliente + ", obrigado por criar uma conta em nosso banco, sua agência é "+conta.agencia+", conta "+conta.numero+" e o seu saldo de "+conta.saldo+" já está disponivel para saque.");
+        System.out.println("Olá " + nomeDoCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numero + " e o seu saldo de " + saldo + " já está disponivel para saque.");
     }
 }
